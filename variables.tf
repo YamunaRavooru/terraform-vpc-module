@@ -10,7 +10,10 @@ variable project{
 variable environment{
 
 }
-variable comman_tags{
+variable common_tags{
     type= map
     
+}
+variable vpc_tags{
+    default={}
 }

@@ -3,7 +3,9 @@ resource "aws_vpc" "main" {
   instance_tenancy = "default"
   enable_dns_support = var.enable_dns_support
 
-  tags = {
-    Name = 
-  }
+  tags = merge(var.common_tags,
+                var.vpc_tags,
+  {
+    Name = local.resource_name
+  })
 }
